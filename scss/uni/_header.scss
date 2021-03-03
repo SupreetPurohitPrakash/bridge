@@ -9,6 +9,9 @@
   transition: all 0.5s ease;
 
   &-top {
+    @media (max-width: 991px) {
+      text-align: center;
+    }
 
     >.container {
       padding: 15px;
@@ -29,6 +32,10 @@
       img {
         width: 13px;
         margin-right: 4px;
+      }
+
+      @media (max-width: 991px) {
+        margin: 0 12px;
       }
     }
   }
