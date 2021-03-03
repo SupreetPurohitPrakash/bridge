@@ -1,0 +1,84 @@
+.link-box {
+
+    &,
+    &-alt,
+    &-orange {
+        font-size: 23px;
+        font-weight: 700;
+        display: inline-block;
+        padding: 16px 43px;
+        color: #fff;
+        background-color: $color-main;
+        border-radius: 6px;
+        transition: all .3s ease-out;
+
+        @media (max-width: 567px) {
+            font-size: 18px;
+            padding: 12px 36px;
+        }
+    }
+
+    &:hover {
+        background-color: $color-sub;
+        background-color: darken($color-main, 5%);
+    }
+
+    &-orange {
+        color: #fff;
+        background-color: $color-sub;
+
+        &:hover {
+            background-color: darken($color-sub, 5%);
+        }
+    }
+
+    &-alt {
+        color: $color-black;
+        background-color: transparent;
+        border: 2px solid $color-main;
+
+        &:hover {
+            color: #fff;
+            background-color: $color-main;
+        }
+    }
+
+}
+
+.link-arrow,
+.link-arrow-only {
+    &::after {
+        content: "";
+        display: inline-block;
+        width: 36px;
+        height: 18px;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNi42NzQiIGhlaWdodD0iMTcuOTUzIiB2aWV3Qm94PSIwIDAgMzYuNjc0IDE3Ljk1MyI+DQogIDxwYXRoIGlkPSJJY29uX2lvbmljLW1kLWFycm93LWZvcndhcmQiIGRhdGEtbmFtZT0iSWNvbiBpb25pYy1tZC1hcnJvdy1mb3J3YXJkIiBkPSJNLTE5LjEsMTYuMDc1SDEzLjI1NUw2Ljk3MiwyMi4zNTksOC42LDIzLjkzbDguOTc3LTguOTc3TDguNiw1Ljk3Nyw3LjAyOCw3LjU0N2w2LjIyNyw2LjI4NEgtMTkuMVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE5LjA5OCAtNS45NzcpIiBmaWxsPSIjNDI4YmNhIi8+DQo8L3N2Zz4NCg==");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+    }
+}
+
+.link-arrow {
+    font-size: 18px;
+    font-weight: 900;
+    color: $color-blue;
+    display: inline-block;
+
+    @media (max-width: 567px) {
+        font-size: 16px;
+    }
+
+    &::after {
+        margin-left: 22px;
+    }
+
+    &:hover {
+        color: darken($color-blue, 5%);
+    }
+}
+
+.link-arrow-only {
+    display: inline-block;
+}

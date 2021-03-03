@@ -1,0 +1,22 @@
+.form-control {
+    height: 52px;
+    border-radius: 6px;
+    padding: 17px 22px;
+    border-color: #C9C9C9;
+
+    input[type="submit"],
+    button[type="submit"] {}
+
+    &::placeholder {
+        font-size: 15px;
+        font-weight: 700;
+    }
+}
+
+input[type="submit"],
+button[type="submit"] {
+    font-size: 21px;
+    display: block;
+    height: auto;
+    cursor: pointer;
+}
