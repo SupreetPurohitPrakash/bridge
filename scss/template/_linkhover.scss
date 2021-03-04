@@ -14,6 +14,10 @@
         border-radius: 6px;
         transition: all .3s ease-out;
 
+        img {
+            margin-left: 25px;
+        }
+
         @media (max-width: 567px) {
             font-size: 18px;
             padding: 12px 36px;

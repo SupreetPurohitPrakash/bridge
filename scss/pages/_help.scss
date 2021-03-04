@@ -1,0 +1,110 @@
+.bannercta {
+    padding: 120px 0 80px;
+
+    &-searchform {
+        position: relative;
+        width: 470px;
+        max-width: 100%;
+        @include margin-auto;
+        margin-top: 50px;
+        height: 70px;
+        border-radius: 10px;
+        box-shadow: 0 20px 40px rgba(#0F1137, .1);
+        overflow: hidden;
+
+        input {
+            height: 100%;
+            border: 0;
+        }
+
+        input:not([type="submit"]) {
+            width: 100%;
+            font-size: 22px;
+            padding: 20px 80px 20px 40px;
+
+            &::placeholder {
+                color: $color-main-light;
+            }
+        }
+
+        input[type="submit"],
+        button[type="submit"] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 80px;
+            background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0iU2VhcmNoX0ljb24iIGRhdGEtbmFtZT0iU2VhcmNoIEljb24iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPg0KICA8cmVjdCBpZD0iYm91bmQiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIvPg0KICA8cGF0aCBpZD0iUGF0aF8yIiBkYXRhLW5hbWU9IlBhdGggMiIgZD0iTS4yOTMsMS43MDdBMSwxLDAsMCwxLDEuNzA3LjI5M2w0LDRBMSwxLDAsMCwxLDQuMjkzLDUuNzA3WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQgMTUpIiBmaWxsPSIjMzYzNjM2Ii8+DQogIDxwYXRoIGlkPSJQYXRoIiBkPSJNNywxNGE3LDcsMCwxLDEsNy03QTcuMDA4LDcuMDA4LDAsMCwxLDcsMTRaTTcsMmE1LDUsMCwxLDAsNSw1QTUuMDA2LDUuMDA2LDAsMCwwLDcsMloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQgNCkiIGZpbGw9IiMzNjM2MzYiLz4NCjwvc3ZnPg0K");
+            background-size: 35%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+}
+
+.infonotice {
+    &-card {
+        display: flex;
+        align-items: center;
+        max-width: 1240px;
+        @include margin-auto;
+        padding: 30px 60px;
+        background-color: #ECF6F4;
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+
+        img {
+            width: 100px;
+        }
+
+        &-cont {
+            margin-left: 85px;
+            margin-right: 20px;
+
+            .heading-alt {
+                font-size: 30px;
+                margin-bottom: 15px;
+            }
+
+            p {
+                color: $color-black;
+                font-size: 18px;
+                margin-bottom: 0;
+            }
+        }
+
+        &-link {
+            flex: 0 0 200px;
+            margin-left: auto;
+
+            .link-box {
+                width: 100%;
+                white-space: nowrap;
+                padding: 20px 30px;
+                display: inline-block;
+                border-radius: 0;
+
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    width: 30px;
+                    height: 16px;
+                    background-size: contain !important;
+                    background-position: center !important;
+                    background: no-repeat;
+                    margin-left: 25px;
+                    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMS42MjkiIGhlaWdodD0iMTguMzkyIiB2aWV3Qm94PSIwIDAgMzEuNjI5IDE4LjM5MiI+DQogIDxnIGlkPSJhcnJvdy1yaWdodCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMSAxLjQxNCkiPg0KICAgIDxwYXRoIGlkPSJQYXRoIiBkPSJNMCwwLDcuNzgyLDcuNzgyLDAsMTUuNTY0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMS44NDcpIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2Utd2lkdGg9IjIiLz4NCiAgICA8cGF0aCBpZD0iUGF0aC0yIiBkYXRhLW5hbWU9IlBhdGgiIGQ9Ik0wLC41SDI4LjUxOCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCA3LjI4MikiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMiIvPg0KICA8L2c+DQo8L3N2Zz4NCg==");
+                }
+
+                &:hover {
+                    color: #fff;
+                    background-color: $color-sub;
+                    border-color: $color-sub;
+                }
+            }
+        }
+    }
+}
