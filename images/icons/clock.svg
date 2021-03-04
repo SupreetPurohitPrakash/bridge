@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="29.999" height="31" viewBox="0 0 29.999 31">
+  <g id="Group_2002" data-name="Group 2002" transform="translate(-445.001 -7558)">
+    <g id="Icon_ionic-md-time" data-name="Icon ionic-md-time" transform="translate(440.636 7554)">
+      <path id="Path_1285" data-name="Path 1285" d="M18.731,10.688H16.538v8.775l4.806,2.708,1.1-1.8-3.709-2Z" fill="#fff"/>
+    </g>
+    <path id="Icon_material-attach-money" data-name="Icon material-attach-money" d="M11.643,7.618c-.9-.233-1.184-.474-1.184-.848,0-.43.4-.73,1.065-.73.7,0,.963.335.987.829h.872a1.573,1.573,0,0,0-1.267-1.5V4.5H10.932v.852A1.54,1.54,0,0,0,9.551,6.777c0,.912.754,1.365,1.855,1.63.987.237,1.184.584,1.184.951,0,.272-.193.706-1.065.706-.813,0-1.133-.363-1.176-.829H9.48a1.653,1.653,0,0,0,1.452,1.511V11.6h1.184v-.848c.77-.146,1.381-.592,1.381-1.4C13.5,8.233,12.538,7.85,11.643,7.618Z" transform="translate(457.52 7574.5)" fill="#fff"/>
+    <g id="Ellipse_20" data-name="Ellipse 20" transform="translate(463 7577)" fill="none" stroke="#fff" stroke-width="1.2">
+      <circle cx="6" cy="6" r="6" stroke="none"/>
+      <circle cx="6" cy="6" r="5.4" fill="none"/>
+    </g>
+    <path id="Path_1286" data-name="Path 1286" d="M-203.653,50.52a12.9,12.9,0,0,0,.714-4.078,13.074,13.074,0,0,0-13.072-13.075,13.074,13.074,0,0,0-13.075,13.075,13.074,13.074,0,0,0,13.075,13.075,12.971,12.971,0,0,0,3.244-.456" transform="translate(675.087 7525.633)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+</svg>

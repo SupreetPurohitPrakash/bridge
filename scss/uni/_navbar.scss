@@ -73,6 +73,10 @@
       color: #fff;
       font-size: 17px;
       padding: 12px 38px;
+
+      &:hover {
+        color: $color-sub;
+      }
     }
 
     &.has-submenu {

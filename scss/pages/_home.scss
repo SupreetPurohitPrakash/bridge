@@ -12,13 +12,36 @@
 }
 
 .homebanner {
+    .row {
+        align-items: center;
+    }
+
+    .heading-lg {
+        margin-bottom: 40px;
+    }
+
+    &-links {
+        margin-top: 85px;
+
+        *:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
 
     p {
+        color: $color-black;
         font-size: 27px;
+        line-height: 35px;
+        max-width: 666px;
 
-        @media (max-width: 567px) {}
+        @media (max-width: 567px) {
+            font-size: 20px;
+        }
+    }
 
-        font-size: 20px;
+    small {
+        margin-top: 12px;
+        opacity: .5;
     }
 
     &-form {
@@ -43,6 +66,56 @@
             max-width: 100%;
         }
     }
+
+    &-contractsico {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        margin-top: 170px;
+
+        @media (max-width: 1200px) {
+            margin-top: 120px;
+        }
+
+        @media (max-width: 991px) {
+            margin-top: 90px;
+        }
+
+        @media (max-width: 767px) {
+            margin-top: 50px;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: 130px;
+            @include margin-auto;
+            margin-bottom: 55px;
+
+            @media (max-width: 991px) {
+                height: 90px;
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+
+.hero-img {
+    position: relative;
+    @include unselect;
+
+    &-parent {}
+
+    &-children,
+    &-child {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &-child {}
 }
 
 .features {
@@ -106,6 +179,12 @@
 
     .heading-alt {
         margin-bottom: 30px;
+    }
+
+    img {
+        max-width: 100%;
+        height: 140px;
+        margin-bottom: 20px;
     }
 
     a {

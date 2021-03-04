@@ -2,13 +2,15 @@
 
     &,
     &-alt,
-    &-orange {
+    &-orange,
+    &-white {
         font-size: 23px;
         font-weight: 700;
         display: inline-block;
         padding: 16px 43px;
         color: #fff;
         background-color: $color-main;
+        border: 2px solid $color-main;
         border-radius: 6px;
         transition: all .3s ease-out;
 
@@ -19,26 +21,36 @@
     }
 
     &:hover {
-        background-color: $color-sub;
-        background-color: darken($color-main, 5%);
+        background-color: transparent;
     }
 
     &-orange {
         color: #fff;
         background-color: $color-sub;
+        border-color: $color-sub;
 
         &:hover {
-            background-color: darken($color-sub, 5%);
+            color: $color-sub;
+            background-color: transparent;
         }
     }
 
     &-alt {
         color: $color-black;
         background-color: transparent;
-        border: 2px solid $color-main;
 
         &:hover {
             color: #fff;
+            background-color: $color-main;
+        }
+    }
+
+    &-white {
+        color: $color-black;
+        background-color: #fff;
+        border-color: #fff;
+
+        &:hover {
             background-color: $color-main;
         }
     }

@@ -42,6 +42,14 @@ jQuery(document).ready(function ($) {
     pause: "false"
   });
 
+  if ($('#scene')[0]) {
+    var scene = document.getElementById('scene');
+    var parallaxInstance = new Parallax(scene, {
+      relativeInput: true
+    });
+  }
+
+
   //limit characters
   $("p").each(function () {
     "use strict";
@@ -65,6 +73,7 @@ jQuery(document).ready(function ($) {
 
   // sticky init
   $(".sticky-div").stick_in_parent({});
+
 
   //if clicked outside container remove said class
   containerOutClock('.has-submenu', 'open');
@@ -103,7 +112,6 @@ jQuery(document).ready(function ($) {
 
   headerOnScroll();
 
-
   // if the target of the click isn't the container nor a descendant of the container
   function containerOutClock(target, toAddClass) {
     $(document).mouseup(function (e) {
@@ -114,24 +122,6 @@ jQuery(document).ready(function ($) {
       }
     });
   }
-
-  function carouselSidebarHeight() {
-    var carousel = $('#carousel1');
-    var carouselHeight = carousel.outerHeight();
-    var sidebar = $('.carousel-sidebar');
-
-    if ($(window).width() < 568) {
-      sidebar.css({
-        width: ''
-      })
-    } else {
-      sidebar.width(carouselHeight);
-    }
-
-  }
-
-  carouselSidebarHeight();
-  $(window).resize(carouselSidebarHeight);
 
   $('.expertise-slider').slick({
     slidesToShow: 3,
@@ -152,6 +142,30 @@ jQuery(document).ready(function ($) {
       },
       {
         breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+  $('.customerlove-slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    infinite: false,
+    dots: true,
+    autoplay: false,
+    autoplaySpeed: 7000,
+    responsive: [{
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 567,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -257,8 +271,19 @@ jQuery(document).ready(function ($) {
     }, 2000)
   }
 
-  if ($('#heroVideo')[0]) {
-    sliderVid();
+  function equalHeightFixer(targetClass) {
+    // Select and loop the container element of the elements you want to equalise
+    var highestBox = 0;
+
+    $(targetClass).each(function () {
+      if ($(this).height() > highestBox) {
+        highestBox = $(this).outerHeight();
+      }
+    });
+    $(targetClass).css({
+      'min-height': highestBox
+    });
   }
+  equalHeightFixer('.customerlove-slider .slick-slide');
 
 });
