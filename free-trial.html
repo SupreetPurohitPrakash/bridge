@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/bundle-min.css" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+
+    <title>Bridge</title>
+    <!-- Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.svg" />
+    <!-- Icon -->
+</head>
+
+<body class="homepage">
+    <div class="sitewrapper">
+
+
+        <div class="sitecontent">
+
+            <section class="section section-freetrial d-flex align-items-center justify-content-center">
+                <div class="section-bg">
+                    <img src="./images/e-U17wiq1vBFo-unsplash.jpg" alt="">
+                </div>
+                <div class="section-icon">
+                    <img src="./images/icons/section-icon.svg" alt="">
+                </div>
+                <div class="container h-100">
+                    <div class="freetrial w-100 max-width--900 mx-auto text-center">
+                        <div class="section-head">
+                            <h2 class="heading color-white">Welcome John,<br>what would you like to do today?</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <img src="./images/icons/trial-icon-1.svg" alt="">
+                                    <p>Do you work in the employment or care sector?</p>
+                                    <a href="./free-trial-business.html" class="link-box">Discover Bridge</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <img src="./images/icons/trial-icon-2.svg" alt="">
+                                    <p>Is your team already using Bridge?</p>
+                                    <a href="#" class="link-box" data-toggle="modal" data-target="#modalJoinTeam">Join
+                                        existing team</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </div>
+
+    <!-- Free Trial Modal -->
+    <div class="modal fade" id="modalFreeTrial" tabindex="-1" role="dialog" aria-labelledby="modalFreeTrialLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body max-width--500 mx-auto text-center">
+                    <img src="./images/logo.svg" alt="" class="logo">
+                    <h3 class="heading-lg">Try Bridge for free</h3>
+                    <p>Get started in minutes, no credit card required</p>
+
+                    <form id="freeTrialForm" action="" class="modal-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="info@name.com.au" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="John" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input id="submitBtn" type="submit" value="Get Started" class="form-control link-box">
+                        </div>
+                    </form>
+                    <a href="#" class="link-arrow">Free Trial Page (Temporary Link)</a>
+                    <small>By signing up accept the Subscription Agreement &amp; Privacy Policy</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Free Trial Modal -->
+    <div class="modal fade" id="modalJoinTeam" tabindex="-1" role="dialog" aria-labelledby="modalJoinTeamLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body max-width--650 mx-auto">
+                    <div class="section-head text-center">
+                        <h4 class="heading-sub mb-0">JOIN YOUR TEAM</h4>
+                        <h3 class="heading mb-0">It looks like your email address isn’t in Bridge.</h3>
+                        <p>We will ask your business owner to invite you</p>
+                    </div>
+
+                    <form id="freeTrialForm" action="" class="modal-form max-width--500 mx-auto">
+                        <div class="form-group">
+                            <label class="label-sm">What is the business name would you like to join?</label>
+                            <input type="email" placeholder="info@name.com.au" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="label-sm">Manager’s email address or phone number?</label>
+                            <input type="text" placeholder="John" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input id="submitBtn" type="submit" value="Send Reminder" class="form-control link-box">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/bundle-min.js"></script>
+    <script src="./js/custom.js" defer></script>
+</body>
+
+</html>

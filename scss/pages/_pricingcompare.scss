@@ -1,0 +1,186 @@
+.section {
+    &-bannerpricecompare {
+        padding: 255px 0 0;
+        min-height: 880px;
+
+        @media (max-width: 1200px) {
+            padding: 40px 0;
+            min-height: 500px;
+        }
+
+        @media (max-width: 767px) {
+            min-height: 350px;
+        }
+
+        .section-bg::after {
+            background-color: #56B39D;
+            opacity: .88;
+        }
+    }
+
+    &-pricingcompare {
+        z-index: 1;
+        overflow: visible;
+    }
+
+}
+
+
+.bannerpricecompare {
+    p+a {
+        margin-top: 24px;
+    }
+}
+
+.pricingcompare {
+    .goback {
+        line-height: 70px;
+    }
+
+    &-table {
+        overflow: visible;
+
+        &-wrap {
+            @media (max-width: 1200px) {
+                overflow-x: auto;
+            }
+        }
+
+        &-header {
+            background-color: #fff;
+
+            @media (min-width: 1201px) {
+                z-index: 1;
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: calc(100% + 1px);
+                border: 1px solid $color-gray-dark;
+                padding: 50px 10px 25px;
+            }
+
+            .heading {
+                font-size: 29px;
+                white-space: nowrap;
+
+                @media (max-width: 1600px) {
+                    font-size: 22px;
+                    margin-bottom: 0;
+                }
+
+                @media (max-width: 1200px) {
+                    font-size: 22px;
+                    margin-bottom: 0;
+                }
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: 300;
+                line-height: 20px;
+                color: $color-black-alt;
+
+                @media (max-width: 1200px) {
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+
+            .price {
+                font-size: 80px;
+                font-weight: 700;
+                margin-top: 20px;
+
+                @media (max-width: 1200px) {
+                    font-size: 35px;
+                    line-height: 40px;
+                    margin-top: 0;
+                }
+            }
+        }
+
+        td {
+            position: relative;
+            padding: 25px;
+            width: 20%;
+            border: 1px solid $color-gray-dark;
+
+            @media (max-width: 1200px) {
+                min-width: 210px;
+                padding: 10px;
+
+                &:first-child {
+                    min-width: 150px;
+                }
+            }
+        }
+
+        thead {
+            text-align: center;
+
+            tr,
+            td {
+                overflow: visible;
+            }
+
+            td {
+                position: relative;
+            }
+
+            h4 {
+                font-size: 25px;
+                font-weight: 700;
+
+                @media (max-width: 1200px) {
+                    font-size: 18px;
+                }
+            }
+
+            td:not(:last-child) .pricingcompare-table-header {
+                border-right-color: transparent;
+            }
+
+            .link-box {
+                @media (max-width: 1600px) {
+                    padding: 8px 16px;
+                    font-size: 16px;
+                }
+
+                @media (max-width: 1200px) {
+                    padding: 3px 10px;
+                    font-size: 14px;
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        tbody {
+
+            h5 {
+                font-size: 18px;
+                font-weight: 700;
+                margin-bottom: 10px;
+
+                @media (max-width: 1200px) {
+                    font-size: 16px;
+                    margin-bottom: 5px;
+                }
+            }
+
+            p {
+                color: $color-black;
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 16px;
+
+                @media (max-width: 1200px) {
+                    font-size: 13px;
+                }
+            }
+        }
+
+
+
+    }
+}

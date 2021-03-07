@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/bundle-min.css" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+
+    <title>Bridge</title>
+    <!-- Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.svg" />
+    <!-- Icon -->
+</head>
+
+<body class="homepage">
+    <div class="sitewrapper">
+
+
+        <div class="sitecontent">
+
+            <section class="section section-freetrialbiz py-0">
+                <div class="container">
+                    <div class="freetrialbiz full-width my-0">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="freetrialbiz-hero">
+                                    <div class="card">
+                                        <img src="./images/icons/freetrialbiz.svg" alt="">
+                                        <h3 class="heading">Let’s get you started</h3>
+                                        <p>Help us to know your business so we can tailor your experience.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <form action="" class="modal-form max-width--600 mx-auto">
+                                    <div class="form-group">
+                                        <label>What’s your business name?</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>How many employees do you need to manage?</label>
+                                        <div class="form-radio-num">
+                                            <div class="form-group">
+                                                <input id="employeeNum1" type="radio" name="employeeNum" value="1-9">
+                                                <label for="employeeNum1">1-9</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="employeeNum2" type="radio" name="employeeNum" value="10-49">
+                                                <label for="employeeNum2">10-49</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="employeeNum3" type="radio" name="employeeNum" value="50-249">
+                                                <label for="employeeNum3">50-249</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="employeeNum4" type="radio" name="employeeNum"
+                                                    value="250-749">
+                                                <label for="employeeNum4">250-749</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="employeeNum5" type="radio" name="employeeNum" value="750+">
+                                                <label for="employeeNum5">750+</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Which best describes your business?</label>
+                                        <div class="form-radio-num form-radio-biztype">
+                                            <div class="form-group">
+                                                <input id="employeeBizType1" type="radio" name="employeeBizType"
+                                                    value="1-9">
+                                                <label for="employeeBizType1"><img src="./images/icons/biztype-1.svg"
+                                                        alt=""></label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="employeeBizType2" type="radio" name="employeeBizType"
+                                                    value="10-49">
+                                                <label for="employeeBizType2"><img src="./images/icons/biztype-2.svg"
+                                                        alt=""></label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="employeeBizType3" type="radio" name="employeeBizType"
+                                                    value="50-249">
+                                                <label for="employeeBizType3"><img src="./images/icons/biztype-3.svg"
+                                                        alt=""></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <select name="" class="form-control">
+                                            <option selected disabled>Select your industry</option>
+                                            <option>Hospitality</option>
+                                            <option>Communication</option>
+                                            <option>Technical</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Mobile number?</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group mt-4">
+                                        <input type="submit" value="Get Started" class="link-box form-control">
+                                        <a href="#" class="link-arrow" data-toggle="modal"
+                                            data-target="#modalJoinTeamUpload">Open modal (Temporary)</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </div>
+
+    <!-- Free Trial Modal -->
+    <div class="modal fade" id="modalFreeTrial" tabindex="-1" role="dialog" aria-labelledby="modalFreeTrialLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body max-width--500 mx-auto text-center">
+                    <img src="./images/logo.svg" alt="" class="logo">
+                    <h3 class="heading-lg">Try Bridge for free</h3>
+                    <p>Get started in minutes, no credit card required</p>
+
+                    <form id="freeTrialForm" action="" class="modal-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="info@name.com.au" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="John" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input id="submitBtn" type="submit" value="Get Started" class="form-control link-box">
+                        </div>
+                    </form>
+                    <a href="#" class="link-arrow">Free Trial Page (Temporary Link)</a>
+                    <small>By signing up accept the Subscription Agreement &amp; Privacy Policy</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Free Trial Modal -->
+    <div class="modal fade" id="modalJoinTeam" tabindex="-1" role="dialog" aria-labelledby="modalJoinTeamLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body max-width--650 mx-auto">
+                    <div class="section-head text-center">
+                        <h4 class="heading-sub mb-0">JOIN YOUR TEAM</h4>
+                        <h3 class="heading mb-0">It looks like your email address isn’t in Bridge.</h3>
+                        <p>We will ask your business owner to invite you</p>
+                    </div>
+
+                    <form id="freeTrialForm" action="" class="modal-form max-width--500 mx-auto">
+                        <div class="form-group">
+                            <label class="label-sm">What is the business name would you like to join?</label>
+                            <input type="email" placeholder="info@name.com.au" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="label-sm">Manager’s email address or phone number?</label>
+                            <input type="text" placeholder="John" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input id="submitBtn" type="submit" value="Send Reminder" class="form-control link-box">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Free Trial Modal -->
+    <div class="modal fade" id="modalJoinTeamUpload" tabindex="-1" role="dialog"
+        aria-labelledby="modalJoinTeamUploadLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button> -->
+                <div class="modal-body max-width--650 mx-auto">
+                    <div class="progress-div">
+                        <div class="progress-div-bar"></div>
+                    </div>
+                    <div class="section-head text-center">
+                        <h3 class="heading mb-0">We are setting up your Bridge trial. <br>Upload your schedule while you
+                            wait.</h3>
+                        <p>Send us your details (a photo is fine and a specialist will enter your information within 24
+                            hs.</p>
+                    </div>
+                    <div id="uploadDrop">
+                        <form id="freeTrialFormUpload" action="" class="modal-form max-width--500 mx-auto">
+                            <div class="upload-text">
+                                <input type="file" id="fileElem" multiple accept="images/*"
+                                    onchange="handleFiles(this.files)">
+                                <strong>Drag &amp; drop files</strong>
+                                <span>or</span>
+                                <label class="link-box" for="fileElem">Select some files</label>
+                            </div>
+                            <p>10mb</p>
+                        </form>
+                        <div id="uploadGallery"></div>
+                    </div>
+                </div>
+
+                <strong class="max-width--500 mx-auto">Try to include location, employees, area of work, shift start and
+                    end times and meals breaks</strong>
+                <a href="#" class="link-arrow" data-toggle="modal" data-target="#modalJoinTeamChoices">Open next modal
+                    (Temporary)</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Free Trial Modal -->
+    <div class="modal fade" id="modalJoinTeamChoices" tabindex="-1" role="dialog"
+        aria-labelledby="modalJoinTeamChoicesLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body max-width--1100 mx-auto text-center">
+                    <div class="section-head">
+                        <h3 class="heading-lg mb-3">Welcome to Bridge, John!</h3>
+                        <p>Get started by choosing one of your options below.</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <h4 class="heading">Learn what you can do in Scheduling.</h4>
+                                <p>Watch a quick tutorial</p>
+                                <img src="./images/icons/trial-choice-1.svg" alt="">
+                                <a href="#" class="link-box">Watch a tutorial</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <h4 class="heading">Try scheduling for a team</h4>
+                                <p>Add few employees then see how easy is to schedule them.</p>
+                                <img src="./images/icons/trial-choice-2.svg" alt="">
+                                <a href="#" class="link-box">Create a team</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/bundle-min.js"></script>
+    <script src="./js/custom.js" defer></script>
+</body>
+
+</html>

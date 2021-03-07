@@ -25,7 +25,8 @@
         <div class="container">
           <span><img src="./images/icons/phone.svg" alt=""> <a href="tel:+61 (02) 8090 9000">+61 (02) 8090
               9000</a></span>
-          <span><img src="./images/icons/awesome-calendar-alt.svg" alt=""> <a href="#">Book a consultation</a></span>
+          <span><img src="./images/icons/awesome-calendar-alt.svg" alt=""> <a href="#">Book a
+              consultation</a></span>
           <span><img src="./images/icons/feather-help-circle.svg" alt=""> <a href="#">Help</a></span>
         </div>
       </div>
@@ -52,14 +53,15 @@
                     <li><a href="./pricing.html">Pricing</a></li>
                     <li><a href="./why-bridge.html">Why Bridge</a></li>
                     <li><a href="./login.html">Login</a></li>
-                    <li class="nav-trial"><a href="#" class="link-box-orange">Start free trial</a></li>
+                    <li class="nav-trial"><a href="#" class="link-box-orange" data-toggle="modal"
+                        data-target="#modalFreeTrial">Start free trial</a>
+                    </li>
                   </ul>
                 </nav>
               </div>
               <!-- header nav toggle -->
               <button class="header-nav-toggle app-md ml-auto">
-                <img src="./images/icons/hamburger.svg" class="open" alt="">
-                <img src="./images/icons/hamburger-close.svg" class="close" alt="">
+                <img src="./images/icons/hamburger.svg" alt="">
               </button>
             </div>
           </div>
@@ -68,6 +70,10 @@
     </header>
 
     <div class="overlay-nav">
+      <!-- header nav toggle -->
+      <button class="header-nav-toggle">
+        <img src="./images/icons/hamburger-close.svg" alt="">
+      </button>
       <!-- .navigation -->
       <div class="navigation">
         <nav id="overlayMenu">
@@ -92,7 +98,7 @@
               <div class="col-lg-5">
                 <h2 class="heading-lg color-blue">Start using the easiest, most compliant CRM today.</h2>
                 <p>Proven to save time and money for providers of employment and care services.</p>
-                <form action="" class="homebanner-form">
+                <form action="" class="homebanner-form max-width--400">
                   <div class="form-group">
                     <input type="email" placeholder="Work e-mail" class="form-control">
                   </div>
@@ -413,6 +419,35 @@
         </div>
       </div>
     </footer>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="modalFreeTrial" tabindex="-1" role="dialog" aria-labelledby="modalFreeTrialLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body max-width--500 mx-auto text-center">
+          <img src="./images/logo.svg" alt="" class="logo">
+          <h3 class="heading-lg">Try Bridge for free</h3>
+          <p>Get started in minutes, no credit card required</p>
+
+          <form id="freeTrialForm" action="" class="modal-form">
+            <div class="form-group">
+              <input type="email" placeholder="info@name.com.au" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="John" class="form-control">
+            </div>
+            <div class="form-group">
+              <input id="submitBtn" type="submit" value="Get Started" class="form-control link-box">
+            </div>
+          </form>
+          <a href="./free-trial-login.html" class="link-arrow">Free Trial Page (Temporary Link)</a>
+          <small>By signing up accept the Subscription Agreement &amp; Privacy Policy</small>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="./js/bundle-min.js"></script>

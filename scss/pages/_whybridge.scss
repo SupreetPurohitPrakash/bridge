@@ -1,0 +1,53 @@
+.bannercolumn {
+    @media (max-width: 991px) {
+        [class^="col-"]:not(:last-child) {
+            margin-bottom: 15px;
+        }
+
+        &-img img {
+            max-height: 550px;
+        }
+    }
+}
+
+.specs {
+    .card {
+        height: 100%;
+        padding: 55px 20px 30px;
+        background-color: #f7f7f7;
+        border: 0;
+        border-radius: 12px;
+        text-align: center;
+
+        &-icon {
+            height: 135px;
+            margin-bottom: 45px;
+        }
+
+        .heading {
+            font-size: 32px;
+            margin-bottom: 35px;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.banner-bg {
+    .homebanner-form {
+        @media (min-width: 992px) {
+            .row {
+                margin: 0 -38px;
+            }
+
+            [class^="col-"] {
+                padding: 0 38px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            [class^="col-"]:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

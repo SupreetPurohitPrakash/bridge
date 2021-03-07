@@ -15,6 +15,10 @@
     color: $color-black !important;
   }
 
+  &-black-alt {
+    color: $color-black-alt !important;
+  }
+
   &-white {
     color: #fff !important;
   }
@@ -72,6 +76,25 @@
   @media (max-width: 567px) {
     font-size: 28px;
     line-height: 40px;
+  }
+
+  &-xl {
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 125px;
+    margin-bottom: 60px;
+
+    @media (max-width: 1200px) {
+      font-size: 70px;
+      line-height: 80px;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 40px;
+      line-height: 50px;
+      margin-bottom: 20px;
+    }
   }
 
   &-lg {
@@ -330,8 +353,16 @@
     max-width: 500px;
   }
 
+  &--550 {
+    max-width: 550px;
+  }
+
   &--600 {
     max-width: 600px;
+  }
+
+  &--650 {
+    max-width: 650px;
   }
 
   &--700 {
@@ -368,6 +399,22 @@
 
   &--1200 {
     max-width: 1200px;
+  }
+
+  &--1250 {
+    max-width: 1250px;
+  }
+
+  &--1300 {
+    max-width: 1300px;
+  }
+
+  &--1350 {
+    max-width: 1350px;
+  }
+
+  &--1400 {
+    max-width: 1400px;
   }
 }
 
@@ -659,5 +706,36 @@
       max-width: 365px;
       @include margin-auto;
     }
+  }
+}
+
+.tick {
+  display: block;
+  @include margin-auto;
+  width: 36px;
+  height: 26px;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNiIgaGVpZ2h0PSIyNi44NDYiIHZpZXdCb3g9IjAgMCAzNiAyNi44NDYiPg0KICA8cGF0aCBpZD0iSWNvbl9hd2Vzb21lLWNoZWNrIiBkYXRhLW5hbWU9Ikljb24gYXdlc29tZS1jaGVjayIgZD0iTTEyLjIyNywzMC45LjUyNywxOS4yYTEuOCwxLjgsMCwwLDEsMC0yLjU0NkwzLjA3MywxNC4xYTEuOCwxLjgsMCwwLDEsMi41NDYsMEwxMy41LDIxLjk4NiwzMC4zODIsNS4xYTEuOCwxLjgsMCwwLDEsMi41NDYsMEwzNS40NzMsNy42NWExLjgsMS44LDAsMCwxLDAsMi41NDZsLTIwLjcsMjAuN0ExLjgsMS44LDAsMCwxLDEyLjIyNywzMC45WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtNC41NzcpIiBmaWxsPSIjMWU5YTdkIi8+DQo8L3N2Zz4NCg==");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (max-width: 1200px) {
+    width: 27px;
+    height: 19px;
+  }
+}
+
+.progress-div {
+  width: 100%;
+  height: 16px;
+  background-color: #F6F6F6;
+  border-radius: 9px;
+  margin-bottom: 45px;
+
+  &-bar {
+    width: 27%;
+    height: 100%;
+    background-color: $color-main;
+    border-radius: 9px;
   }
 }
