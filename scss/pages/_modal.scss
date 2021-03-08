@@ -22,6 +22,16 @@
         }
     }
 
+    &-fullwidth {
+        max-width: 100%;
+        margin-right: -8.5px;
+    }
+
+    &-body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
     small {
         display: block;
         color: $color-black;
@@ -171,6 +181,39 @@
             width: auto;
             font-size: 20px;
             padding: 14px 30px;
+        }
+    }
+}
+
+#modalForgotPass {
+    .modal-body {
+        @media (min-width: 992px) {
+            padding: 60px 0 65px;
+        }
+    }
+}
+
+#modalChoosePlan {
+    button[data-dismiss="modal"] {
+        filter: brightness(0) invert(1);
+    }
+
+    .modal-content {
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    .pricinglisting {
+        padding: 40px 0;
+
+        .section-head {
+            >* {
+                color: #fff;
+            }
+        }
+
+        .card {
+            background-color: #fff;
         }
     }
 }

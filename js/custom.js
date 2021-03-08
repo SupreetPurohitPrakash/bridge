@@ -480,4 +480,35 @@ jQuery(document).ready(function ($) {
   $('[data-toggle="modal"]').click(function () {
     $(this).parents('.modal').modal('hide');
   })
+
+  function stickyTableHeader() {
+    var tableObj = $('#tableCauseAssign'),
+      tableHead = tableObj.find('thead'),
+      tableWidth = tableHead.outerWidth(),
+      tableHeadHeight = tableHead.outerHeight(),
+      tableHeadOffset = tableHead.offset().top;
+    console.log(tableObj, tableHead, tableHeadHeight, tableHeadOffset);
+
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > tableHeadOffset) {
+        tableHead.css({
+          'position': 'fixed',
+          'top': 0,
+          'width': tableWidth
+        });
+        tableObj.css('paddingTop', tableHeadHeight);
+        console.log('PUT');
+      } else {
+        tableHead.css({
+          'position': '',
+          'top': '',
+          'width': ''
+        });
+        tableObj.css('paddingTop', '');
+        console.log('REMOVED');
+      }
+    })
+  }
+
+  stickyTableHeader();
 });

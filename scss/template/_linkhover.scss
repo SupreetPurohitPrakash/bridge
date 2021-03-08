@@ -165,3 +165,37 @@
         }
     }
 }
+
+.link-box-goback {
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 12px 23px 12px 48px;
+    color: $color-main;
+    background-color: #C6E5DE;
+    border-radius: 6px;
+
+
+    &::before {
+        content: "";
+        @include absoltopcenter;
+        left: 23px;
+        width: 6.5px;
+        height: 11px;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2LjQxMSIgaGVpZ2h0PSIxMS4yMTUiIHZpZXdCb3g9IjAgMCA2LjQxMSAxMS4yMTUiPg0KICA8cGF0aCBpZD0iSWNvbl9pb25pYy1pb3MtYXJyb3ctYmFjayIgZGF0YS1uYW1lPSJJY29uIGlvbmljLWlvcy1hcnJvdy1iYWNrIiBkPSJNMTMuMTgzLDExLjhsNC4yNDMtNC4yNGEuOC44LDAsMSwwLTEuMTM1LTEuMTMybC00LjgwNyw0LjhhLjguOCwwLDAsMC0uMDIzLDEuMTA1bDQuODI4LDQuODM4YS44LjgsMCwwLDAsMS4xMzUtMS4xMzJaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTEuMjUxIC02LjE5NCkiIGZpbGw9IiMxZTlhN2QiLz4NCjwvc3ZnPg0K");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: all .3s ease-out;
+    }
+
+    &:hover {
+        color: #fff;
+        background-color: $color-main;
+
+        &::before {
+            filter: brightness(0) invert(1);
+        }
+    }
+}

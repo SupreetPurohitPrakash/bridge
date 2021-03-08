@@ -128,3 +128,47 @@ button[type="submit"] {
         }
     }
 }
+
+.custom-radio {
+    .form-group {
+        display: inline-block;
+        margin-right: 15px;
+
+        input {
+            display: none;
+        }
+
+        label {
+            position: relative;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 300;
+            cursor: pointer;
+
+            &::before,
+            &::after {
+                content: "";
+                transition: all .2s ease-out;
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+            }
+
+            &::before {
+                border: 1px solid $color-main;
+                margin-right: 7px;
+            }
+
+            &::after {
+                @include absoltopcenter;
+                left: 0;
+                border: 0px solid $color-main;
+            }
+        }
+
+        input:checked+label::after {
+            border-width: 4.5px;
+        }
+    }
+}
