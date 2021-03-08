@@ -740,3 +740,140 @@
     }
   }
 }
+
+.nav-megamenu {
+  z-index: 1;
+  position: absolute;
+  align-items: center;
+  display: flex;
+  width: 775px;
+  transform: translateY(-1000%);
+  opacity: 0;
+  box-shadow: 0 0 15px rgba(#000, .15);
+  background-color: #fff;
+  transition: opacity .3s ease-out;
+
+  &-left,
+  &-right {}
+
+  &-left {
+    padding: 0 42px;
+    flex: 0 0 467px;
+  }
+
+  &-right {
+    padding: 40px 42px;
+    flex: auto;
+    background-color: #F7F7F7;
+  }
+
+  &-title {
+    color: #B4B4B4;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+
+  &-list {
+    padding-left: 0;
+    list-style-type: none;
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+
+      a {
+        font-size: 17px;
+        font-weight: 700;
+
+        &:hover {
+          color: $color-main;
+        }
+      }
+    }
+  }
+
+  .link-arrow {
+    font-size: 17px;
+    font-weight: 900;
+    margin-top: 40px;
+  }
+
+  .card {
+    position: relative;
+    padding: 25px 20px 25px 60px;
+    border: 0;
+    border-bottom: 1px solid #E8E8E8;
+
+    &:last-child {
+      border-bottom-color: transparent;
+    }
+
+    img {
+      @include absoltopcenter;
+      left: 0;
+      height: 27px;
+    }
+
+    strong {
+      display: block;
+      font-size: 17px;
+      margin-bottom: 9px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 17px;
+      max-width: 250px;
+      margin-bottom: 0;
+    }
+
+  }
+}
+
+.has-dropdown-product .nav-megamenu {
+  left: -165px;
+}
+
+.has-dropdown {
+  position: relative;
+
+  >a {
+    padding-right: 18px;
+
+    &::after {
+      content: "";
+      @include absoltopcenter;
+      right: 0;
+      width: 12.5px;
+      height: 7px;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMi40MzMiIGhlaWdodD0iNy4xMDkiIHZpZXdCb3g9IjAgMCAxMi40MzMgNy4xMDkiPg0KICA8cGF0aCBpZD0iSWNvbl9pb25pYy1pb3MtYXJyb3ctZG93biIgZGF0YS1uYW1lPSJJY29uIGlvbmljLWlvcy1hcnJvdy1kb3duIiBkPSJNMTIuNDA2LDE2LjIxMmw0LjctNC43YS44ODUuODg1LDAsMCwxLDEuMjU1LDAsLjkuOSwwLDAsMSwwLDEuMjU5TDEzLjAzNiwxOC4xYS44ODcuODg3LDAsMCwxLTEuMjI1LjAyNkw2LjQ0NywxMi43N0EuODg5Ljg4OSwwLDEsMSw3LjcsMTEuNTExWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYuMTg4IC0xMS4yNDYpIiBmaWxsPSIjMWU5YTdkIi8+DQo8L3N2Zz4NCg==");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: all .3s ease-out;
+    }
+
+    &:hover::after {
+      transform: rotate(180deg);
+    }
+
+    line-height: 80px !important;
+  }
+}
+
+.has-dropdown:hover .nav-megamenu {
+  opacity: 1;
+  transform: none;
+}
+
+.has-dropdown-product .nav-megamenu::before {
+  content: "";
+  position: absolute;
+  bottom: calc(100% - 1px);
+  left: 180px;
+  border: 20px solid transparent;
+  border-bottom-color: #fff;
+}
