@@ -744,14 +744,18 @@
 .nav-megamenu {
   z-index: 1;
   position: absolute;
-  align-items: center;
-  display: flex;
   width: 775px;
-  transform: translateY(-1000%);
+  top: -1000%;
   opacity: 0;
   box-shadow: 0 0 15px rgba(#000, .15);
   background-color: #fff;
   transition: opacity .3s ease-out;
+
+  &-row {
+    display: flex;
+    align-items: center;
+
+  }
 
   &-left,
   &-right {}
@@ -837,6 +841,35 @@
   left: -165px;
 }
 
+.has-dropdown-why .nav-megamenu {
+  left: auto;
+  right: -165px;
+}
+
+.has-dropdown-contracts .nav-megamenu {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 460px;
+  padding: 0 30px 30px;
+
+  .nav-megamenu-title {
+    margin-bottom: 10px;
+  }
+
+  .link-arrow {
+    margin-top: 0;
+  }
+
+  .card {
+    padding-left: 70px;
+
+    img {
+      width: 47px;
+      height: auto;
+    }
+  }
+}
+
 .has-dropdown {
   position: relative;
 
@@ -866,7 +899,7 @@
 
 .has-dropdown:hover .nav-megamenu {
   opacity: 1;
-  transform: none;
+  top: 100%;
 }
 
 .has-dropdown-product .nav-megamenu::before {

@@ -217,3 +217,252 @@
         }
     }
 }
+
+#modalBookConsultation {
+
+    .modal-dialog {
+        @media (min-width: 1550px) {
+            max-width: 1540px;
+        }
+    }
+
+    // [class^="background-main-"] {
+    //     padding: 50px 80px;
+    // }
+    .col-lg-6 {
+        padding: 50px 80px;
+    }
+
+    .color-white p {
+        color: #fff;
+    }
+
+    .logo {
+        margin-bottom: 40px;
+    }
+
+    .heading-lg {
+        position: relative;
+        font-size: 51px;
+        line-height: 55px;
+        padding-left: 38px;
+        margin-bottom: 30px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background-color: #fff;
+        }
+    }
+
+    p {
+        font-size: 27px;
+        font-weight: 500;
+        line-height: 35px;
+    }
+
+    .modal {
+        &-form {
+            input {
+                height: 52px;
+
+                &[type="submit"] {
+                    padding: 10px;
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &-review {
+            position: relative;
+            padding-left: 125px;
+            margin-top: 25px;
+
+            img {
+                @include absoltopcenter;
+                left: 0;
+                width: 85px;
+                height: 85px;
+                border: 2px solid #fff;
+                border-radius: 50%;
+            }
+
+            p {
+                font-size: 15px;
+                line-height: 15px;
+                font-style: italic;
+                margin-bottom: 15px;
+            }
+
+            span {
+                display: block;
+                font-size: 13px;
+                font-style: italic;
+            }
+        }
+    }
+}
+
+#modalBookConsultationDate {
+    @media (min-width: 992px) {
+        .modal-dialog {
+            max-width: 770px;
+        }
+
+        .modal-content {
+            padding: 140px 90px 210px;
+        }
+
+        .heading {
+            font-size: 38px;
+            margin-bottom: 60px;
+        }
+    }
+}
+
+.timezone-select {
+    background-color: transparent;
+    border: 0;
+    padding: 5px;
+    padding-right: 20px;
+    margin-bottom: 30px;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMi41NTIiIGhlaWdodD0iNy4xNzciIHZpZXdCb3g9IjAgMCAxMi41NTIgNy4xNzciPg0KICA8cGF0aCBpZD0iSWNvbl9pb25pYy1pb3MtYXJyb3ctZG93biIgZGF0YS1uYW1lPSJJY29uIGlvbmljLWlvcy1hcnJvdy1kb3duIiBkPSJNMTIuNDY2LDE2LjI2bDQuNzQ2LTQuNzVhLjg5My44OTMsMCwwLDEsMS4yNjcsMCwuOS45LDAsMCwxLDAsMS4yNzFMMTMuMSwxOC4xNjJhLjkuOSwwLDAsMS0xLjIzNy4wMjZsLTUuNDE1LTUuNGEuOS45LDAsMCwxLDEuMjY3LTEuMjcxWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYuMTg4IC0xMS4yNDYpIiBmaWxsPSIjMzYzNjM2Ii8+DQo8L3N2Zz4NCg==");
+    background-size: 13px 7px;
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+.dayselect {
+
+    &-slider {
+        &-wrap {
+            position: relative;
+            background-color: #F9F9F9;
+            border-radius: 11px;
+            max-width: 500px;
+            @include margin-auto;
+        }
+
+        .slick {
+            &-arrow {
+
+                &::before,
+                &::after {
+                    display: none;
+                }
+            }
+
+            &-prev {
+                left: -50px;
+            }
+
+            &-next {
+                right: -50px;
+            }
+        }
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    &-label {
+        display: block;
+        width: 100%;
+        cursor: pointer;
+
+        span {
+            display: block;
+        }
+    }
+
+    &-dayname {
+        font-size: 13px;
+        line-height: 24px;
+        font-weight: 500;
+        padding: 20px 0 10px;
+        border-bottom: 1px solid #C3C3C3;
+    }
+
+    &-card {
+        color: #C3C3C3;
+        background-color: transparent;
+        padding: 12px 5px 8px;
+        text-align: center;
+        max-width: 40px;
+        @include margin-auto;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+    }
+
+    &-month {
+        font-size: 10px;
+        line-height: 14px;
+        font-weight: 500;
+        opacity: 0;
+    }
+
+    &-day {
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 500;
+    }
+
+    input[type="radio"]:checked+label &-card {
+        color: #fff;
+        background-color: $color-main-light;
+        box-shadow: 0 3px 6px rgba(#000, .15);
+    }
+
+    input[type="radio"]:checked+label &-month {
+        opacity: 1;
+    }
+}
+
+.timeselect {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    margin-top: 55px;
+    @include margin-auto;
+
+    .row {
+        margin: 0 -16px;
+    }
+
+    .form-group {
+        flex: 0 0 25%;
+        padding: 0 16px;
+        margin-bottom: 20px;
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    label {
+        font-size: 14px;
+        width: 100%;
+        height: 54px;
+        line-height: 54px;
+        border-radius: 9px;
+        display: block;
+        color: $color-black;
+        background-color: #F6F6F6;
+        cursor: pointer;
+    }
+
+    input:checked+label {
+        color: #fff;
+        background-color: $color-main-light;
+    }
+}

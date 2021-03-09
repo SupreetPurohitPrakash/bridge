@@ -1,0 +1,38 @@
+.previewvid {
+    .full-width {
+        margin: 0;
+        padding-top: 115px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 500px;
+            background-color: $color-main-light;
+        }
+    }
+}
+
+#heroVideo {}
+
+.post-video {
+    cursor: pointer;
+
+    &.playing::after {
+        display: none;
+    }
+
+    &::after {
+        z-index: 1;
+        content: "";
+        @include absolcenter;
+        width: 84px;
+        height: 84px;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4My45ODUiIGhlaWdodD0iODMuOTg1IiB2aWV3Qm94PSIwIDAgODMuOTg1IDgzLjk4NSI+DQogIDxwYXRoIGlkPSJJY29uX21hdGVyaWFsLXBsYXktY2lyY2xlLW91dGxpbmUiIGRhdGEtbmFtZT0iSWNvbiBtYXRlcmlhbC1wbGF5LWNpcmNsZS1vdXRsaW5lIiBkPSJNMzYuNTk0LDYzLjg4OWwyNS4yLTE4LjktMjUuMi0xOC45Wk00NC45OTIsM0E0MS45OTIsNDEuOTkyLDAsMSwwLDg2Ljk4NSw0NC45OTIsNDIuMDA4LDQyLjAwOCwwLDAsMCw0NC45OTIsM1ptMCw3NS41ODZBMzMuNTk0LDMzLjU5NCwwLDEsMSw3OC41ODYsNDQuOTkyLDMzLjYzOSwzMy42MzksMCwwLDEsNDQuOTkyLDc4LjU4NloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zIC0zKSIgZmlsbD0iI2ZmZiIvPg0KPC9zdmc+DQo=");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
