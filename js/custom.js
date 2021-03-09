@@ -519,52 +519,69 @@ jQuery(document).ready(function ($) {
 
   // console.log(moment().format("MMM D d"));
 
-  const DAYS = () => {
-    const days = [],
-      dayName = [],
-      month = [];
-    const dateStart = moment()
-    const dateEnd = moment().add(30, 'days');
-    while (dateEnd.diff(dateStart, 'days') >= 0) {
-      days.push(dateStart.format('MMM'));
-      month.push(dateStart.format('D'))
-      dayName.push(dateStart.format('d'));
-      dateStart.add(1, 'days')
+
+  function dayPopulate() {
+    var sliderItem = $('.dayselect-slider');
+    sliderItem.empty();
+
+    const DAYS = () => {
+      const days = [],
+        dayName = [],
+        month = [],
+        dayNameArray = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+
+      const dateStart = moment()
+      const dateEnd = moment().add(30, 'days');
+      while (dateEnd.diff(dateStart, 'days') >= 0) {
+        days.push(dateStart.format('D'));
+        month.push(dateStart.format('MMM'));
+        // dayName.push(dateStart.format('d'));
+        dayName.push(dayNameArray[dateStart.format('d')]);
+        dateStart.add(1, 'days')
+      }
+      var dayObj = new Object();
+      dayObj.days = days;
+      dayObj.dayName = dayName;
+      dayObj.month = month;
+      return dayObj;
     }
-    var dayObj = new Object();
-    dayObj.days = days;
-    dayObj.dayName = dayName;
-    dayObj.month = month;
-    return dayObj;
+    // console.log(DAYS().days);
+
+    for (i = 0; i < DAYS().days.length; i++) {
+      console.log(DAYS().days[i]);
+      sliderItem.append('<div class="item"><input id="daySelect' + (i + 1) + '" name="daySelect" type="radio"><label for="daySelect' + (i + 1) + '" class="dayselect-label"><span class="dayselect-dayname">' + DAYS().dayName[i] + '</span><div class="dayselect-card"><span class="dayselect-month">' + DAYS().month[i] + '</span><span class="dayselect-day">' + DAYS().days[i] + '</span></div></label></div>')
+    }
+
+    $('.dayselect-slider').slick({
+      slidesToShow: 7,
+      slidesToScroll: 1,
+      arrows: true,
+      infinite: false,
+      dots: false,
+      autoplay: false,
+      prevArrow: '<button class="slick-prev slick-arrow" aria-label="Previous" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="7.177" height="12.552" viewBox="0 0 7.177 12.552"> <path id="Icon_ionic-ios-arrow-down" data-name="Icon ionic-ios-arrow-down" d="M12.466,16.26l4.746-4.75a.893.893,0,0,1,1.267,0,.9.9,0,0,1,0,1.271L13.1,18.162a.9.9,0,0,1-1.237.026l-5.415-5.4a.9.9,0,0,1,1.267-1.271Z" transform="translate(18.423 -6.188) rotate(90)" fill="#363636"/></svg></button>',
+      nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="7.177" height="12.552" viewBox="0 0 7.177 12.552"> <path id="Icon_ionic-ios-arrow-down" data-name="Icon ionic-ios-arrow-down" d="M12.466,16.26l4.746-4.75a.893.893,0,0,1,1.267,0,.9.9,0,0,1,0,1.271L13.1,18.162a.9.9,0,0,1-1.237.026l-5.415-5.4a.9.9,0,0,1,1.267-1.271Z" transform="translate(-11.246 18.74) rotate(-90)" fill="#363636"/></svg></button>',
+      responsive: [{
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          }
+        },
+        {
+          breakpoint: 567,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
   }
-  console.log(DAYS());
+
+  dayPopulate();
 
   // $('#modalBookConsultationDate').modal('show');
-  $('.dayselect-slider').slick({
-    slidesToShow: 7,
-    slidesToScroll: 1,
-    arrows: true,
-    infinite: false,
-    dots: false,
-    autoplay: false,
-    prevArrow: '<button class="slick-prev slick-arrow" aria-label="Previous" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="7.177" height="12.552" viewBox="0 0 7.177 12.552"> <path id="Icon_ionic-ios-arrow-down" data-name="Icon ionic-ios-arrow-down" d="M12.466,16.26l4.746-4.75a.893.893,0,0,1,1.267,0,.9.9,0,0,1,0,1.271L13.1,18.162a.9.9,0,0,1-1.237.026l-5.415-5.4a.9.9,0,0,1,1.267-1.271Z" transform="translate(18.423 -6.188) rotate(90)" fill="#363636"/></svg></button>',
-    nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="7.177" height="12.552" viewBox="0 0 7.177 12.552"> <path id="Icon_ionic-ios-arrow-down" data-name="Icon ionic-ios-arrow-down" d="M12.466,16.26l4.746-4.75a.893.893,0,0,1,1.267,0,.9.9,0,0,1,0,1.271L13.1,18.162a.9.9,0,0,1-1.237.026l-5.415-5.4a.9.9,0,0,1,1.267-1.271Z" transform="translate(-11.246 18.74) rotate(-90)" fill="#363636"/></svg></button>',
-    responsive: [{
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        }
-      },
-      {
-        breakpoint: 567,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
 
   $('#modalBookConsultationDate').on('shown.bs.modal', function (e) {
     $('.dayselect-slider').slick('setPosition');

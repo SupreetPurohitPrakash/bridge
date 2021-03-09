@@ -873,25 +873,26 @@
 .has-dropdown {
   position: relative;
 
+  &::after {
+    content: "";
+    @include absoltopcenter;
+    right: 0;
+    width: 12.5px;
+    height: 7px;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMi40MzMiIGhlaWdodD0iNy4xMDkiIHZpZXdCb3g9IjAgMCAxMi40MzMgNy4xMDkiPg0KICA8cGF0aCBpZD0iSWNvbl9pb25pYy1pb3MtYXJyb3ctZG93biIgZGF0YS1uYW1lPSJJY29uIGlvbmljLWlvcy1hcnJvdy1kb3duIiBkPSJNMTIuNDA2LDE2LjIxMmw0LjctNC43YS44ODUuODg1LDAsMCwxLDEuMjU1LDAsLjkuOSwwLDAsMSwwLDEuMjU5TDEzLjAzNiwxOC4xYS44ODcuODg3LDAsMCwxLTEuMjI1LjAyNkw2LjQ0NywxMi43N0EuODg5Ljg4OSwwLDEsMSw3LjcsMTEuNTExWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYuMTg4IC0xMS4yNDYpIiBmaWxsPSIjMWU5YTdkIi8+DQo8L3N2Zz4NCg==");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all .3s ease-out;
+  }
+
+  &:hover::after {
+    transform: rotate(180deg);
+  }
+
   >a {
     padding-right: 18px;
 
-    &::after {
-      content: "";
-      @include absoltopcenter;
-      right: 0;
-      width: 12.5px;
-      height: 7px;
-      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMi40MzMiIGhlaWdodD0iNy4xMDkiIHZpZXdCb3g9IjAgMCAxMi40MzMgNy4xMDkiPg0KICA8cGF0aCBpZD0iSWNvbl9pb25pYy1pb3MtYXJyb3ctZG93biIgZGF0YS1uYW1lPSJJY29uIGlvbmljLWlvcy1hcnJvdy1kb3duIiBkPSJNMTIuNDA2LDE2LjIxMmw0LjctNC43YS44ODUuODg1LDAsMCwxLDEuMjU1LDAsLjkuOSwwLDAsMSwwLDEuMjU5TDEzLjAzNiwxOC4xYS44ODcuODg3LDAsMCwxLTEuMjI1LjAyNkw2LjQ0NywxMi43N0EuODg5Ljg4OSwwLDEsMSw3LjcsMTEuNTExWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYuMTg4IC0xMS4yNDYpIiBmaWxsPSIjMWU5YTdkIi8+DQo8L3N2Zz4NCg==");
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      transition: all .3s ease-out;
-    }
-
-    &:hover::after {
-      transform: rotate(180deg);
-    }
 
     line-height: 80px !important;
   }
@@ -902,11 +903,22 @@
   top: 100%;
 }
 
-.has-dropdown-product .nav-megamenu::before {
+.nav-megamenu::before {
   content: "";
   position: absolute;
   bottom: calc(100% - 1px);
   left: 180px;
   border: 20px solid transparent;
   border-bottom-color: #fff;
+}
+
+.has-dropdown-contracts .nav-megamenu::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.has-dropdown-why .nav-megamenu::before {
+  left: auto;
+  right: 180px;
+  border-bottom-color: #f7f7f7;
 }
